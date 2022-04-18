@@ -20,7 +20,7 @@ This repository implements Dual Path Single Shot Detector(DPSSD). The code were 
 ### Step-by-step installation
 
 ```bash
-git clone https://github.com/ZQPei/DSSD.git
+git clone https://github.com/Willie-Xu/DPSSD.git
 cd DPSSD
 #Required packages
 pip install -r requirements.txt

@@ -1,0 +1,2 @@
+# DPSSD
+This repository implements Dual Path Single Shot Detector(DPSSD). The code were borrowed heavily from [SSD](https://github.com/lufficc/SSD). The things I did was the DPSSD network definition, including the **backbone of dpn, deconvolutional module, and the prediction modules**. Code for training, distributed training, dataset loading and data augmention is the same as [lufficc's SSD](https://github.com/lufficc/SSD). Thanks [@lufficc](https://github.com/lufficc) for his great job.

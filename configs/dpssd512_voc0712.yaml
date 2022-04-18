@@ -1,0 +1,22 @@
+MODEL:
+  NUM_CLASSES: 21
+  PRIORS:
+    FEATURE_MAPS: [64, 32, 16, 8, 4, 2]
+    STRIDES: [8, 16, 32, 64, 128, 256]
+    MIN_SIZES: [33, 72, 158, 245, 331, 418]
+    MAX_SIZES: [72, 158, 245, 331, 418, 504]
+    ASPECT_RATIOS: [[1.6, 2, 3], [1.6, 2, 3], [1.6, 2, 3], [1.6, 2, 3], [1.6, 2, 3], [1.6, 2, 3]]
+    BOXES_PER_LOCATION: [8, 8, 8, 8, 8, 8]
+INPUT:
+  IMAGE_SIZE: 512
+DATASETS:
+  TRAIN: ("voc_2007_trainval", "voc_2012_trainval")
+  TEST: ("voc_2007_test", )
+SOLVER:
+  MAX_ITER: 160000
+  LR_STEPS: [80000, 100000]
+  GAMMA: 0.1
+  BATCH_SIZE: 8
+  LR: 1e-3
+
+OUTPUT_DIR: 'outputs/dpssd512_voc0712'

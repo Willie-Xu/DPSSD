@@ -1,0 +1,22 @@
+MODEL:
+  NUM_CLASSES: 81
+  PRIORS:
+    FEATURE_MAPS: [64, 32, 16, 8, 4, 2]
+    STRIDES: [8, 16, 32, 64, 128, 256]
+    MIN_SIZES: [33, 72, 158, 245, 331, 418]
+    MAX_SIZES: [72, 158, 245, 331, 418, 504]
+    ASPECT_RATIOS: [[2, 3], [2, 3], [2, 3], [2, 3], [2, 3], [2, 3]]
+    BOXES_PER_LOCATION: [6, 6, 6, 6, 6, 6]
+INPUT:
+  IMAGE_SIZE: 512
+DATASETS:
+  TRAIN: ("coco_2014_train", "coco_2014_valminusminival")   #
+  TEST: ("coco_2015_dev", )  # "coco_2014_minival", "coco_2015_dev"
+SOLVER:
+  MAX_ITER: 440000
+  LR_STEPS: [280000, 360000]
+  GAMMA: 0.1
+  BATCH_SIZE: 8
+  LR: 1e-3
+
+OUTPUT_DIR: 'outputs/dpssd512_coco_trainval35k'
